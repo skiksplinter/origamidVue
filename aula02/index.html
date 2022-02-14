@@ -17,12 +17,23 @@
 
   <div id="app1">
     {{ferramenta}}
-</div>
+  </div>
 
   <div id="app2">
     {{instrumento}}
-</div>
+  </div>
 
+<!-- aula 03 -->
+ <div id="app3">
+    {{cor}}
+  </div>
+
+  <!-- aula 04 -->
+ <div id="quadrado">
+ <p>Lado: {{lado}}</p>
+ <p>Perímetro: {{lado*4}}</p>
+ <p>Area: {{lado*lado}}</p>
+</div>
 
   <script>
     const vm = new Vue({
@@ -43,6 +54,22 @@
       el: "#app2",
       data: {
         instrumento: "Guitarra"
+      }
+    })
+
+    //aula 03
+    const vm3 = new Vue({
+      el: "#app3",
+      data: {
+        cor: "Vermelho"
+      }
+    })
+
+    //aula 04
+    const vm4 = new Vue({
+      el: "#quadrado",
+      data: {
+        lado: 40,
       }
     })
   </script>
