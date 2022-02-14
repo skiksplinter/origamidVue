@@ -1,79 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./vue.js"></script>
+    <title>Vue.js</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="./vue.js"></script>
-  <title>Vue.js</title>
-</head>
+  <body>
+    <div id="app">{{nome}}</div>
 
-<body>
+    <div id="app1">{{ferramenta}}</div>
 
-  <div id="app">
-    {{nome}}
-  </div>
+    <div id="app2">{{instrumento}}</div>
 
-  <div id="app1">
-    {{ferramenta}}
-  </div>
+    <!-- aula 03 -->
+    <div id="app3">{{cor}}</div>
 
-  <div id="app2">
-    {{instrumento}}
-  </div>
+    <!-- aula 04 -->
+    <div id="quadrado">
+      <p>Lado: {{lado}}</p>
+      <p>Perímetro: {{lado*4}}</p>
+      <p>Area: {{lado*lado}}</p>
+    </div>
 
-<!-- aula 03 -->
- <div id="app3">
-    {{cor}}
-  </div>
+    <script>
+      const vm = new Vue({
+        el: "#app",
+        data: {
+          nome: "Martelo",
+        },
+      });
 
-  <!-- aula 04 -->
- <div id="quadrado">
- <p>Lado: {{lado}}</p>
- <p>Perímetro: {{lado*4}}</p>
- <p>Area: {{lado*lado}}</p>
-</div>
+      const vm1 = new Vue({
+        el: "#app1",
+        data: {
+          ferramenta: "Furadeira",
+        },
+      });
 
-  <script>
-    const vm = new Vue({
-      el: "#app",
-      data: {
-        nome: "Martelo"
-      }
-    })
+      const vm2 = new Vue({
+        el: "#app2",
+        data: {
+          instrumento: "Guitarra",
+        },
+      });
 
-    const vm1 = new Vue({
-      el: "#app1",
-      data: {
-        ferramenta: "Furadeira"
-      }
-    })
+      //aula 03
+      const vm3 = new Vue({
+        el: "#app3",
+        data: {
+          cor: "Vermelho",
+        },
+      });
 
-    const vm2 = new Vue({
-      el: "#app2",
-      data: {
-        instrumento: "Guitarra"
-      }
-    })
-
-    //aula 03
-    const vm3 = new Vue({
-      el: "#app3",
-      data: {
-        cor: "Vermelho"
-      }
-    })
-
-    //aula 04
-    const vm4 = new Vue({
-      el: "#quadrado",
-      data: {
-        lado: 40,
-      }
-    })
-  </script>
-
-</body>
-
+      //aula 04
+      const vm4 = new Vue({
+        el: "#quadrado",
+        data: {
+          lado: 40,
+        },
+      });
+    </script>
+  </body>
 </html>
