@@ -9,20 +9,20 @@
   </head>
   <body>
     <div id="app">
-      <a v-bind:href="link">Google</a>
-      <p :class="cor" class="ativo">Texto</p>
-      <p :class="comprou ? liberar : naoliberar ">O cliente comprou?</p>
+      <button @click="contador++">Clique Aqui</button>
+      {{contador}}
     </div>
 
     <script>
       const vm = new Vue({
         el: "#app",
         data: {
-          link: "https://www.google.com.br/",
-          cor: "azul",
-          liberar: "verde",
-          naoliberar: "vermelho",
-          comprou: true,
+          contador: 0,
+        },
+        methods: {
+          handleClick(event) {
+            console.log(event);
+          },
         },
         methods: {
           incrementar() {
